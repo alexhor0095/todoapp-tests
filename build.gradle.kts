@@ -19,10 +19,8 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.7.20")
-    testImplementation("io.qameta.allure:allure-kotlin-model:2.4.0")
-    testImplementation("io.qameta.allure:allure-kotlin-commons:2.4.0")
-    testImplementation("io.qameta.allure:allure-kotlin-junit4:2.4.0")
-    testImplementation("junit:junit:4.13.2")
+    testImplementation ("org.junit.jupiter:junit-jupiter-api:5.8.1")
+    testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 }
 
 tasks.test {

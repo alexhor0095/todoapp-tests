@@ -1,18 +1,18 @@
 import data.Priority
 import data.Task
 import data.TasksRepositoryMemory
-import io.qameta.allure.kotlin.Description
-import io.qameta.allure.kotlin.junit4.AllureRunner
+import io.qameta.allure.Description
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
-import org.junit.runner.RunWith
 import kotlin.test.assertEquals
 
-@RunWith(AllureRunner::class)
+
 class AppTests {
 
     private val repository = TasksRepositoryMemory()
 
     @Test()
+    @DisplayName("Тестирование добавление тасок")
     @Description("Тестирование добавление тасок")
     fun addTaskTest() {
         repository.addTask(Task(name = "Test task", priority = Priority.MEDIUM))
@@ -23,6 +23,7 @@ class AppTests {
     }
 
     @Test
+    @DisplayName("Тестирование фильтра по закрытым таскам")
     @Description("Тестирование фильтра по закрытым таскам")
     fun closeTaskTest() {
         repository.addTask(Task(name = "Test task", priority = Priority.MEDIUM))
@@ -32,6 +33,7 @@ class AppTests {
     }
 
     @Test
+    @DisplayName("Eще не реализовано")
     fun nameFilterTest() {
         //ToDo Реализвать тесты после реализации соотвествующего функционала
     }
