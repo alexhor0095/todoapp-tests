@@ -6,7 +6,7 @@ import org.junit.platform.suite.api.SelectClasspathResource
 import org.junit.platform.suite.api.Suite
 
 @Suite
-@SelectClasspathResource("resources")
+@SelectClasspathResource("resources/features")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "bdd/steps")
 class AddTasksTest {
 }
