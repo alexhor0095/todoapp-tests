@@ -28,4 +28,14 @@ class TasksRepositoryMemory : TasksRepository() {
     override fun uncompleteTask(id: Int) {
         tasks.first { it.id == id }.completed = false
     }
+
+    override fun sortingByNameOrderByASC(): List<Task> {
+        //TODO("Not yet implemented")
+        return tasks.toList()
+    }
+
+    override fun sortingByDate(): List<Task> {
+        //TODO("Not yet implemented")
+        return tasks.toList()
+    }
 }

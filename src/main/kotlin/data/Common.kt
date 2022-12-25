@@ -16,4 +16,6 @@ abstract class TasksRepository {
     abstract fun deleteTask(id: Int)
     abstract fun completeTask(id: Int)
     abstract fun uncompleteTask(id: Int)
+    abstract fun sortingByNameOrderByASC():List<Task>
+    abstract fun sortingByDate():List<Task>
 }
