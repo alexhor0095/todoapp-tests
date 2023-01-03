@@ -3,6 +3,7 @@ package menu
 import data.Priority
 import data.Task
 import data.TasksRepository
+import java.time.LocalDate
 import kotlin.system.exitProcess
 
 fun addTaskFromMenu(repository: TasksRepository) {
@@ -12,7 +13,8 @@ fun addTaskFromMenu(repository: TasksRepository) {
     var pr = readln().toIntOrNull() ?: 2
     pr = pr.coerceIn(1..3)
     val priority = Priority.values()[pr - 1]
-    repository.addTask(Task(name = name, priority = priority))
+    TODO("Реализовать добавление даты")
+    repository.addTask(Task(name = name, priority = priority, endDate = LocalDate.of(2023, 1, 1)))
 }
 
 fun listTasksFromMenu(repository: TasksRepository) {
